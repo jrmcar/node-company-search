@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>About</title>
+        <link rel="icon" href="/img/search.png">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+
+            <p><h3>Why ?</h3></p>
+            <p>
+                This app was created as a test by October. It search company phone numbers by company name or by SIREN code. When searching by company name,
+                 you can add a postal code to get better results.</br>
+                This app is on Jérémy Carpentier's Github.
+            </p>
+
+            <p><h3>How does it work ?</h3></p>
+            <p>
+                When you search by SIREN code, the app will call entreprise.data.gouv.fr API and get the exact name, postal code and city of the company.
+                 Then it will do a Google search with all these data using the Google Place API. This call will return a Place ID and it will query the API again to get company details (including phone numbers).</br>
+                When you search by company name it will do the Google search steps without calling entreprise.data.gouv.fr API.</br>
+                I limited my Google API calls to 100/day. Let me know if you need more to test.
+            </p>
+        </div>
+
+        {{>footer}}
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Company Search</title>
+        <link rel="icon" href="/img/search.png">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+
+            <form>
+                <input placeholder="Company name" id="search">
+                <input placeholder="Postal code" id="postal_code">
+                <input placeholder="SIREN code" id="siren_code">
+                <button>Search</button>
+            </form>
+
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+            <p id="message-3"></p>
+
+            <p><h3>How to use the app ?</h3></p>
+            <p>A company name or a SIREN code is required to get data.</br>
+            When you search by company name, you can add a postal code for better results.</br>
+            Search by SIREN code to get exact results.</p>
+        </div>
+
+        {{>footer}}
+
+        <script src="/js/app.js"></script>
+    </body>
+</html>
